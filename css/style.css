@@ -61,11 +61,6 @@ button{
     border: none;
     border-radius: 20px;
 }
-.login-bt:first-of-type{
-    background-color: white;
-    color: #000000;
-}
-
 
 .hero-section {
     max-width: 900px;
@@ -98,11 +93,15 @@ button{
     padding: .7rem 1rem;
     color: white;
 }
-.download-bt, .end-footer .login-bt{
+.login-bt:first-of-type{
+    background-color: white;
+    color: #000000;
+}
+.download-bt:last-child, .end-footer .login-bt{
     background-color: #4453E7;
     color: white;
 }
-.end-section .download-bt:hover, .end-footer .login-bt:hover{
+.download-bt:last-child:hover, .end-footer .login-bt:hover{
     background-color: #5B69ED;
     color: white;
 }
@@ -111,9 +110,7 @@ button{
     font-size: 16px;
     padding-right: .3rem;
 }
-.download-bt:nth-of-type(2){
-    background-color: #5B69ED;
-}
+
 .button:hover, .login-bt:nth-child(2):hover,
 .white-bt:hover,.login-bt:hover{
     cursor: pointer;
@@ -136,7 +133,7 @@ button{
     color: #4453E7;
 }
 
-.login-bt:nth-of-type(2){
+.login-bt:nth-child(2){
     color: white;
     background-color: #23272A;
 }
