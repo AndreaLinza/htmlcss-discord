@@ -35,7 +35,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
+    flex-grow: 2;
 
 }
 
@@ -43,10 +43,10 @@ header{
     color: white;
     font-size: 16px;
     text-decoration: none;
-    padding: 0 15px;
+    padding: 0 1rem;
 }
 
-.link a:hover {
+.link a:hover, .list-box ul a:hover {
     text-decoration: underline;
 }
 
@@ -96,7 +96,14 @@ button{
 
 .button{
     padding: .7rem 1rem;
-    background-color: #7289DA;
+    color: white;
+}
+.download-bt, .end-footer .login-bt{
+    background-color: #4453E7;
+    color: white;
+}
+.end-section .download-bt:hover, .end-footer .login-bt:hover{
+    background-color: #5B69ED;
     color: white;
 }
 .download-bt::before{
@@ -104,8 +111,11 @@ button{
     font-size: 16px;
     padding-right: .3rem;
 }
-
-.button:hover{
+.download-bt:nth-of-type(2){
+    background-color: #5B69ED;
+}
+.button:hover, .login-bt:nth-child(2):hover,
+.white-bt:hover,.login-bt:hover{
     cursor: pointer;
     -webkit-box-shadow: 0px 16px 29px -15px #000000;
     -moz-box-shadow: 0px 16px 29px -15px #000000;
@@ -120,31 +130,19 @@ button{
 }
 .white-bt{
     background-color:white;
-    color: black;
-    
+    color: black;  
 }
 .white-bt:hover,.login-bt:hover{
     color: #4453E7;
-    cursor: pointer;
-    -webkit-box-shadow: 0px 16px 29px -15px #000000;
-    -moz-box-shadow: 0px 16px 29px -15px #000000;
-    -o-box-shadow: 0px 16px 29px -15px #000000;
-    box-shadow: 0px 16px 29px -15px #000000;
 }
 
 .login-bt:nth-of-type(2){
     color: white;
     background-color: #23272A;
-
 }
 
 .login-bt:nth-child(2):hover {
-    cursor: pointer;
     background-color: #323640;
-    -webkit-box-shadow: 0px 16px 29px -21px #000000;
-    -moz-box-shadow: 0px 16px 29px -21px #000000;
-    -o-box-shadow: 0px 16px 29px -21px #000000;
-    box-shadow: 0px 16px 29px -21px #000000;
 }
 .bgd-wave{
     min-height:50px;
@@ -155,7 +153,7 @@ button{
     rotate: 180deg;
 }
 section{
-    padding: 35px;
+    padding: 150px 0;
 }
 section:nth-of-type(2),
 section:last-of-type {
@@ -173,7 +171,6 @@ section:last-of-type {
     background-size: cover;
     flex-grow: 1;
 }
-
 
 .description {
     padding: 4rem;
@@ -195,7 +192,7 @@ section:last-of-type {
     color: #000000;
     text-align: center;
 }
-.download{
+.end-section{
     width: 980px;
     margin: auto;
     text-align: center;
@@ -203,70 +200,80 @@ section:last-of-type {
     background-repeat: no-repeat;
     background-position:top;
 }
-.download h3{
+.end-section h3{
     font-size: 25px;
     color: #000000;
     padding: 2rem;
 }
 
 footer {
-    background-color: #323640;
-    padding: 25px;
+    background-color: #23272A;
+    padding: 25px 0;
 }
-
-.footer-section {
+.box{
     max-width: 1200px;
-    min-height: 500px;
+    height: 500px;
     margin: auto;
-    border: 2px dashed rgb(255, 255, 255);
-    display: flex;
-}
-
-.language-section {
-    background-color: violet;
-    display: flex;
-    align-items: baseline;
-    padding-top: 30px;
-    flex-grow: 3;
-}
-.container{
     display: flex;
     width: 70%;
 }
-.list-container { 
-    border: 1px dashed rgb(0, 0, 0);
+.footer-section {
+    padding-top: 30px;
+    flex-grow: 3;
+}
+.footer-section h3{
+    font-size: 25px;
+    padding: 2rem 10rem 2rem 0;
+    color: #5B69ED;
+}
+.footer-section img{
+    width: 30px;
+    height: 20px;
+    margin-right:.5rem;
+}
+select{
+    background: none;
+    border: none;
+    color: white;
+}
+.social-section{
+    display: flex;
+}
+.social-section a img{
+    filter: invert(91%) sepia(93%) saturate(34%) hue-rotate(254deg) brightness(105%) contrast(100%);
+    width: 25px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.list-box { 
     width: 100%;
-    background-color: cornflowerblue;
 }
 
-.list-container h4 {
-    padding: 30px 0;
+.list-box h4 {
+    padding: 50px 0 30px 0;
     text-align: left;
-    color: #4453E7;
+    color: #5B69ED;
     font-weight: bold;
 }
 
-.list-container ul {
+.list-box ul {
     list-style: none;
     width: 80%;
 }
 
-.list-container ul a {
+.list-box ul a {
     color: white;
     text-decoration: none;
     text-align: left;
-    line-height: 30px;
+    line-height: 35px;
 
 }
 
-.list-container ul a:hover {
-    text-decoration: underline;
-}
 hr{
-    margin:50px 0;
+    margin:50px 0 0 0;
 }
 .end-footer{
-    background-color: cadetblue;
+
     padding: 20px 0;
     max-width: 1200px;
     margin: auto;
@@ -274,13 +281,11 @@ hr{
     justify-content: space-between;
 }
 .end-footer .logo{
-    border: 2px dashed black;
-    width: auto;
+    width: 20%;
     display: flex;
     align-items: center;
 }
 
-.end-footer .login{  
-    border: 2px dashed black;
-    width: auto;
+.end-footer .login{
+    width: 20%;
 }
