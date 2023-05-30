@@ -31,6 +31,7 @@ header{
 }
 
 .link {
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +50,7 @@ header{
     text-decoration: underline;
 }
 
-.login {
+.login{
     text-align: right;
     width: 20%;
 }
@@ -60,15 +61,9 @@ button{
     border: none;
     border-radius: 20px;
 }
-
-
-.login button:hover {
-    cursor: pointer;
-    color: #4453E7;
-    -webkit-box-shadow: 0px 16px 29px -15px #000000;
-    -moz-box-shadow: 0px 16px 29px -15px #000000;
-    -o-box-shadow: 0px 16px 29px -15px #000000;
-    box-shadow: 0px 16px 29px -15px #000000;
+.login-bt:first-of-type{
+    background-color: white;
+    color: #000000;
 }
 
 
@@ -95,46 +90,55 @@ button{
     line-height: 35px;
 }
 
-.home-button {
-    display: flex;
+.home-buttons {
     margin-top: 25px;
-    align-items: center;
-    justify-content: center;
 }
 
-.home-button button:first-child {
-    margin: 0 15px;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 20px;
+.button{
+    padding: .7rem 1rem;
+    background-color: #7289DA;
+    color: white;
 }
-
-.home-button button:first-child:hover {
-    cursor: pointer;
-    color: #4453E7;
-    -webkit-box-shadow: 0px 16px 29px -21px #000000;
-    -moz-box-shadow: 0px 16px 29px -21px #000000;
-    -o-box-shadow: 0px 16px 29px -21px #000000;
-    box-shadow: 0px 16px 29px -21px #000000;
-}
-
-.home-button button:first-child::before {
+.download-bt::before{
     content: "\2913";
     font-size: 16px;
     padding-right: .3rem;
 }
 
-.home-button button:last-child {
+.button:hover{
+    cursor: pointer;
+    -webkit-box-shadow: 0px 16px 29px -15px #000000;
+    -moz-box-shadow: 0px 16px 29px -15px #000000;
+    -o-box-shadow: 0px 16px 29px -15px #000000;
+    box-shadow: 0px 16px 29px -15px #000000;
+}
+.big-button{
     margin: 0 15px;
-    padding: 16px 32px;
+    padding: 1rem 2rem;
     border: none;
     border-radius: 20px;
+}
+.white-bt{
+    background-color:white;
+    color: black;
+    
+}
+.white-bt:hover,.login-bt:hover{
+    color: #4453E7;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 16px 29px -15px #000000;
+    -moz-box-shadow: 0px 16px 29px -15px #000000;
+    -o-box-shadow: 0px 16px 29px -15px #000000;
+    box-shadow: 0px 16px 29px -15px #000000;
+}
+
+.login-bt:nth-of-type(2){
     color: white;
     background-color: #23272A;
 
 }
 
-.home-button button:last-child:hover {
+.login-bt:nth-child(2):hover {
     cursor: pointer;
     background-color: #323640;
     -webkit-box-shadow: 0px 16px 29px -21px #000000;
@@ -142,52 +146,67 @@ button{
     -o-box-shadow: 0px 16px 29px -21px #000000;
     box-shadow: 0px 16px 29px -21px #000000;
 }
-
-section:first-of-type,
-section:nth-child(3) {
-    background-color: rgb(240, 127, 255);
+.bgd-wave{
+    min-height:50px;
+    background-image: url('../img/wave.svg');
+    filter: opacity(10%);
+}
+.bgd-wave:nth-of-type(2){
+    rotate: 180deg;
+}
+section{
     padding: 35px;
 }
-
-section:nth-child(2),
+section:nth-of-type(2),
 section:last-of-type {
-    background-color: #F6F6F6;
-    padding: 35px;
+    background-color: #E5E5E5;;
 }
-
-.info-section {
+.container{
     max-width: 1200px;
     min-height: 500px;
     margin: auto;
     display: flex;
-    background-color: rgb(246, 255, 127);
-    border: 2px dashed red;
 }
 
-.info-section img {
-    background-image: url('../img/item1.svg');
-    display: flex;
+.info-section img{
+    background-repeat:no-repeat;
+    background-size: cover;
     flex-grow: 1;
 }
 
-.info-section .description {
-    text-align: center;
+
+.description {
+    padding: 4rem;
+    align-self: center;
     color: #000000;
-    border: 2px dashed red;
-    width: 30%;
+    width: 40%;
+}
+.description h2, .download-section h2{
+    font-size: 45px;
+}
+.description p, .download-section p{
+    padding-top: 2rem;
+    line-height: 25px;
 }
 
 .download-section {
-    max-width: 1200px;
+    flex-direction: column;
     min-height: 900px;
-    margin: auto;
     color: #000000;
     text-align: center;
-    background-color: chartreuse;
-    border: 2px dashed red;
 }
-.download-section img{
-    max-width: 100%;
+.download{
+    width: 980px;
+    margin: auto;
+    text-align: center;
+    background-image: url('../img/stars.svg');
+    background-repeat: no-repeat;
+    background-position:top;
+}
+.download h3{
+    font-size: 25px;
+    color: #000000;
+    padding: 2rem;
 }
 
 footer {
@@ -212,7 +231,6 @@ footer {
 }
 .container{
     display: flex;
-    border: 1px dashed rgb(255, 255, 255);
     width: 70%;
 }
 .list-container { 
