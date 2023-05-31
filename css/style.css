@@ -133,12 +133,12 @@ button{
     color: #4453E7;
 }
 
-.login-bt:nth-child(2){
+.login-bt:nth-of-type(2){
     color: white;
     background-color: #23272A;
 }
 
-.login-bt:nth-child(2):hover {
+.login-bt:nth-of-type(2):hover {
     background-color: #323640;
 }
 .bgd-wave{
@@ -195,7 +195,8 @@ section:last-of-type {
     text-align: center;
     background-image: url('../img/stars.svg');
     background-repeat: no-repeat;
-    background-position:top;
+    background-size: auto 42px;
+    background-position:center top;
 }
 .end-section h3{
     font-size: 25px;
